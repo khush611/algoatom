@@ -2,6 +2,25 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+front end :
+**import**
+- react
+- react-router-dom
+- react-facebook-login
+- react-google-login
+- react-chartjs-2
+- react-notifications
+- axios
+
+back end :
+**import**
+- express
+- cors
+- mongoose
+- nodemon
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

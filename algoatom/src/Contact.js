@@ -76,7 +76,7 @@ const correctFormat = () => {
              .then(() => {
                setSuccess(true);
                  console.log('Submitted');
-                 createNotification('success');
+                 // createNotification('success');
 
              })
              .catch((err) => console.log(err));
@@ -87,9 +87,9 @@ clearData()
 const contacts = contactsData.map(contact => <h2>{contact}</h2>)
 
 function createNotification(type){
-  if(type==='success')
-  NotificationManager.success(`${firstName} ${lastName}`, 'Successful submission');
-  else if(type==='error'){
+  // if(type==='success')
+  // NotificationManager.success(`${firstName} ${lastName}`, 'Successful submission');
+ if(type==='error'){
     NotificationManager.error(`fill details correctly: length of firstName>1 & lastName>1 & message>=7 & valid email`, 'Error in submission');
   }
 
@@ -105,12 +105,13 @@ function createNotification(type){
     <Link to="/#"><img className="image" style={{height:"40px",width:"40px"}}
     src="https://www.flaticon.com/svg/static/icons/svg/561/561127.svg" alt="logo"/></Link>
     <div className="rightnav">
-      <Link to="/contact">Contact</Link>
+      <Link to="/contact">Contact Us</Link>
       <Link to="/analytics">Analytics</Link>
       <Link to="/#"><img className="image" style={{height:"20px",width:"20px"}} src="https://www.flaticon.com/svg/static/icons/svg/2089/2089702.svg" alt="pic"/></Link>
     </div>
     </div>
     <div className="wrapper">
+    
   <NotificationContainer/>
        <div  className = "form-container">
       <h1>Contact Us Form</h1>

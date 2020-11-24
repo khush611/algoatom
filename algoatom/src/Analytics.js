@@ -38,7 +38,7 @@ axios.post("http://localhost:8080/getEnquiries",({
   <Link to="/#"><img className="image" style={{height:"40px",width:"40px"}}
   src="https://www.flaticon.com/svg/static/icons/svg/561/561127.svg" alt="logo"/></Link>
 <div className="rightnav">
-    <Link to="/contact">Contact</Link>
+    <Link to="/contact">Contact Us</Link>
     <Link to="/analytics">Analytics</Link>
     <Link to="/#"><img className="image" style={{height:"20px",width:"20px"}} src="https://www.flaticon.com/svg/static/icons/svg/2089/2089702.svg" alt="pic"/></Link>
   </div>

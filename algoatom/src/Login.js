@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
+
+import { Link, Switch, Route,Redirect } from "react-router-dom";
 import "./index.css"
 function Login() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -39,14 +41,19 @@ function Login() {
 
     }
     return <div className="login-container">
+    <div className="topnav">
+    <Link to="/#"><img className="image" style={{height:"40px",width:"40px"}}
+    src="https://www.flaticon.com/svg/static/icons/svg/561/561127.svg" alt="logo"/></Link>
+    </div>
         <h1>Login</h1>
         {
             isLoggedIn ?
-             <div>
-                <h1>hello,{name}</h1>
-                <p>email: {email}</p>
-                <img style={{ width: '50px', height: '50px', borderRadius: '50%' }} src={picture} alt="picture" />
-            </div> : 
+            //  <div>
+            //     <h1>hello,{name}</h1>
+            //     <p>email: {email}</p>
+            //     <img style={{ width: '50px', height: '50px', borderRadius: '50%' }} src={picture} alt="picture" />
+            // </div>
+             <Redirect to="/contact" />:
             <div className="container">
                 <div className="inner">
                       <div className="google">
@@ -61,10 +68,12 @@ function Login() {
                 <div className="facebook">
                     <FacebookLogin
                 appId="299605661226766"
-                autoLoad={true}
+                autoLoad={false}
                 fields="name,email,picture"
                 onClick={componentClicked}
-                callback={responseFacebook} />
+                callback={responseFacebook}
+                className="f"
+                 />
                 </div>
                 </div>
                 </div>

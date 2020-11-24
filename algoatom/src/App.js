@@ -6,20 +6,9 @@ import Analytics from "./Analytics";
 import { Link, Switch, Route } from "react-router-dom";
 export default function App() {
   return (
-    
+
     <div className="App">
 
-      {/* <Login />
-      <Contact />
-      <Analytics /> */}
-      <div className="topnav">
-      <div className="rightnav">
-        {/* <Link to="/">Login</Link> */}
-        <Link to="/contact">Contact</Link>
-        <Link to="/analytics">Analytics</Link>
-        <Link to="/#"><img className="image" style={{height:"20px",width:"20px"}} src="https://www.flaticon.com/svg/static/icons/svg/2089/2089702.svg" alt="pic"/></Link>
-      </div>
-      </div>
       <Switch>
         <Route exact path="/">
           <Login />
